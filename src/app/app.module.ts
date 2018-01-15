@@ -5,12 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { TaskListPage } from '../pages/tasklist/tasklist';
+import { Dialogs } from '@ionic-native/dialogs';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    TaskListPage
   ],
   imports: [
     BrowserModule,
@@ -19,11 +20,12 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    TaskListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Dialogs,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
